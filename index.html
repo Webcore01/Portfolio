@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Singh Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><img src="images/logo11.png" alt=""></h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Welcome to <span>My Portfolio</span></h1>
+                <p>A Passionate UI/UX Designer & Web Developer</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 style="color: white;">About <SPAN>Me</SPAN></h2>
+            <div class="about-content">
+                <p style="color: white;">
+                    Hi! I'm Shivam Singh, a creative UI/UX designer and web developer based in Uttar Pradesh. My focus is on crafting sleek, user-friendly designs and developing responsive websites. I enjoy solving complex problems with simple solutions and creating delightful digital experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 style="color: white;">Contact <span>Me</span></h2>
+            <form action="Contact Form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <h2 style="color: white;">Download <span>CV</span></h2>
+            <a href="images/Shivam singh Resume.pdf" download class="download-btn">Download
+<i class="fa fa-download"></i>
+            </a>
+        </div>
+    </section>
+    <script>
+        const scriptURL = '<https://script.google.com/macros/s/AKfycbxRNT53N4VI08BZIQhg9uIJFKPF-XhCymj2UJp-PnfVY4oojbwTyOaMZYodSWVNRaOHVw/exec>'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
